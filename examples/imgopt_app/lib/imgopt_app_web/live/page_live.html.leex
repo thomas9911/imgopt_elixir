@@ -1,0 +1,17 @@
+<section class="phx-hero" phx-drop-target={@uploads.avatar.ref}>
+
+<form id="upload-form" phx-submit="upload" phx-change="validate-upload">
+  <%= live_file_input @uploads.avatar %>
+  <button type="submit">Upload</button>
+</form>
+
+<%= for entry <- @uploaded_files do %>
+  <article class="upload-entry">
+    <figure>
+      <img src=<%= entry %>>
+      <figcaption><%= entry %></figcaption>
+    </figure>
+  </article>
+<% end %>
+
+</section>

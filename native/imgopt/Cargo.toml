@@ -1,0 +1,14 @@
+[package]
+name = "imgopt"
+version = "0.1.0"
+authors = []
+edition = "2018"
+
+[lib]
+name = "imgopt"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.22.0"
+imgopt = {git = "https://github.com/thomas9911/imgopt", branch = "main", default-features = false, version = "0.2.1"}
